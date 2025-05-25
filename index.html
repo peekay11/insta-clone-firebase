@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>insta-clone</title>
+  <link rel="shortcut icon" href="instagram-logo-transparent-6b90.png" type="image/x-icon">
+  
+  <!-- Boxicons CDN -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="left">
+    <div class="sidebar">
+      <button class="nav-btn"><i class="bx bx-home"></i> Home</button>
+      <button class="nav-btn"><i class="bx bx-search"></i> Search</button>
+      <button class="nav-btn"><i class="bx bx-compass"></i> Explore</button>
+      <button class="nav-btn"><i class="bx bx-video"></i> Reels</button>
+      <button class="nav-btn"><i class="bx bx-message-square-dots"></i> Messages</button>
+      <button class="nav-btn"><i class="bx bx-heart"></i> Notifications</button>
+      <button class="nav-btn"><i class="bx bx-plus-circle"></i> Create</button>
+      <button class="nav-btn"><i class="bx bx-bar-chart-alt-2"></i> Dashboard</button>
+      <button class="nav-btn"><i class="bx bx-bot"></i> Meta AI</button>
+      <button class="nav-btn"><i class="bx bx-code-alt"></i> AI Studio</button>
+      <button class="nav-btn"><i class="bx bx-dots-horizontal-rounded"></i> More</button>
+
+      <div class="profile-section">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User Avatar" class="profile-avatar" />
+        <span class="user-display-name">Guest</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div id="status-bar" class="status-bar"></div>
+    <div id="posts-wrapper"></div>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="right">
+    <div class="user-profile-section">
+      <img src="https://images.unsplash.com/photo-1715889680244-869181c961e8?w=600&auto=format&fit=crop&q=60" class="profile-avatar" alt="User Avatar" />
+      <div class="user-display-name top">Guest</div>
+      <button class="logout-btn" id="login-btn">Login</button>
+    </div>
+
+    <span style="font-weight: 700; margin-bottom: 10px;">Suggested Users</span>
+
+    <div class="suggested-users-section">
+      <div class="suggested-user">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="suggested-avatar" alt="User1" />
+        <div class="suggested-display-name">User1</div>
+        <button class="follow-btn">Follow</button>
+      </div>
+      <div class="suggested-user">
+        <img src="https://randomuser.me/api/portraits/men/46.jpg" class="suggested-avatar" alt="User2" />
+        <div class="suggested-display-name">User2</div>
+        <button class="follow-btn">Follow</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal-backdrop" class="modal-backdrop"></div>
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h2 id="modal-title">Login</h2>
+      <input type="email" id="auth-email" placeholder="Email" />
+      <input type="password" id="auth-password" placeholder="Password" />
+      <button id="auth-action-btn">Login</button>
+      <span id="auth-switch-text">Don't have an account? </span><a href="#" id="toggle-auth-mode">Sign up</a>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="post-generator.js"></script>
+
+</body>
+</html>
